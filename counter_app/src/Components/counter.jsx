@@ -3,38 +3,47 @@ import React, { useState } from 'react';
 import './counter.css'
 export const Counter = () =>{
   
-    const [count, setCount] = useState(1)
-
+    const [counter, setCounter] = useState(1)
+   const maxValue = 800;
     const decrement = () =>{
-       setCount(count - 1)
+    
+       setCounter(counter - 1)
     }
     const increment = () =>{
-        setCount(count + 1)
+    
+        setCounter((prevcount)=>{
+            if(prevcount < maxValue){
+                return (prevcount += 1)
+            }else{
+                return (prevcount === maxValue)
+            }
+        })
     }
       
     const setvalue = (e) =>{
-        setCount(e.target.value)
+        setCounter(e.target.value)
     }
+    
     return(
         <>
-         {/* <input className='myinpt' onChange={setvalue}  type="number" placeholder='Enter the start number ' ></input> */}
-
+         <input onChange={setvalue}  type="Number" placeholder='Enter the start number' ></input>
+         {/* <input onChange={setMaxvalue}  type="number" placeholder='Max Vlule' ></input> */}
+        
         <div className='counterdiv'>
-
-
 
          <button onClick={decrement} className='btn1'>
            -
          </button>
 
-         <input className='count2' onChange={setvalue} value="input" type="number">
-            {count}
-         </input>
+         <h3 className='count2'>
+            {counter}
+         </h3>
 
          <button onClick={increment} className='btn2'>
              +
          </button>
         </div>
+        
         </>
     )
 }
