@@ -1,0 +1,31 @@
+.counterdiv{
+    display: flex;
+    margin-left: 45%;
+    margin-top: 200px;
+}
+.btn1{
+    color: #a54946;
+    border: 1px solid #B46865;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 43px;
+    background-color: #FFFFFF;
+    height: 50px;
+}
+.btn2{
+    color: azure;
+    background-color: #A54946;
+    border: 1px solid #B46865;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 43px;
+    height: 50px;
+}
+.count2{
+    width: 43px;
+    border: 1px solid #B46865;
+    height: 100%;
+    background-color: #F8E9E9;
+    color: #a54946;
+    height: 50px;
+}
